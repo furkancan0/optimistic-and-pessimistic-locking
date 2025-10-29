@@ -1,0 +1,23 @@
+name: 'spring-boot-locking'
+services:
+  postgres:
+    image: postgres:16.2
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: furkan
+      POSTGRES_PASSWORD: furkan
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - spring-net
+
+volumes:
+  postgres:
+    driver: local
+
+networks:
+  spring-net:
+    driver: bridge

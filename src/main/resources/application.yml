@@ -1,0 +1,15 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: Image-Processing-Task
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: furkan
+    password: furkan
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
